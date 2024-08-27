@@ -1,0 +1,15 @@
+{% extends 'core/base.html' %}
+{% block title %}{{title}}{% endblock title %}
+{% block content %}
+<div class="w-full flex mt-5 justify-center">
+    <div class="bg-white w-5/12 rounded-lg">
+        <h1 class="font-bold text-3xl text-center pb-5 pt-5 px-5">{{ title }}</h1>
+        <form action="" method='post' class="px-8 pt-3 pb-8 mb-4">
+            {% csrf_token %}
+            {{form}}
+            <button class="bg-blue-900 text-white hover:text-blue-900 hover:bg-white border border-blue-900 font-bold px-4 py-2 my-3 rounded-lg" type="submit">Submit</button>
+        </form>
+    </div>
+    
+</div>
+{% endblock %}
